@@ -1,0 +1,45 @@
+$color-main: #ffffff;
+$color-2: #fbd784;
+$chrd: "Chronicle Display Semi";
+$gr: "Gilroy";
+$main-size: 18px;
+$wrap: 1920px;
+$container: 1790px;
+$center: 0 auto;
+$content-conainer: 1460px;
+@mixin flex($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin line {
+    content: "";
+    display: inline-block;
+    width: 72px;
+    height: 2px;
+    background: $color-2;
+    position: absolute;
+}
+
+body {
+    color: $color-main;
+    font-size: $main-size;
+}
+
+.wrapper {
+    max-width: $wrap;
+    margin: $center;
+    padding: 0 15px;
+    min-height: auto;
+    background: url(../img/BG.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #0b1d26;
+}
+
+li a:hover,
+span:hover {
+    color: $color-2;
+    transition: 0.3s;
+}

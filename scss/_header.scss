@@ -1,0 +1,146 @@
+.header {
+    padding-top: 64px;
+    &-menu-container {
+        @include flex(space-between, center);
+        max-width: $container;
+        margin: $center;
+        padding: 0 15px;
+    }
+    .menu {
+        @include flex(center, center);
+    }
+    .menu li {
+        margin: 0 20px;
+        a {
+            font-family: $gr;
+            font-weight: 700;
+        }
+    }
+    .account {
+        position: relative;
+    }
+    .img-account {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: -32px;
+        top: -2px;
+    }
+    .logo {
+        width: 108px;
+        height: 24px;
+    }
+    .img-logo {
+        width: 100%;
+        height: 100%;
+    }
+    .span-account {
+        font-family: $gr;
+        font-size: 17px;
+    }
+    &-title-container {
+        margin: 200px auto 0 auto;
+        max-width: 950px;
+        position: relative;
+    }
+    .description {
+        font-family: $gr;
+        font-weight: 800;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: $color-2;
+        margin-left: 104px;
+    }
+    .description::before {
+        @include line;
+        transform: translate(-104px, 10px);
+    }
+    h1 {
+        font-family: $chrd;
+        font-weight: 600;
+        font-size: 88px;
+        line-height: 100px;
+        text-transform: capitalize;
+        margin: 32px 0;
+    }
+    .scrolldown {
+        font-family: $gr;
+        font-weight: bold;
+        & img {
+            width: 16px;
+            height: 24px;
+        }
+        span {
+            vertical-align: top;
+            margin-right: 12px;
+        }
+    }
+}
+
+.mobile-button {
+    width: 30px;
+    height: 29px;
+    cursor: pointer;
+    background: none;
+    display: none;
+    position: relative;
+    z-index: 5;
+}
+
+.mobile-icon {
+    width: 100%;
+    height: 3px;
+    border: none;
+    background: $color-main;
+    position: relative;
+}
+
+.mobile-icon::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    border: none;
+    background: $color-main;
+    position: absolute;
+    top: -10px;
+}
+
+.mobile-icon::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    border: none;
+    background: $color-main;
+    position: absolute;
+    bottom: -10px;
+}
+
+.mobile-nav {
+    display: none;
+    width: 320px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(11, 29, 38, 0.9);
+}
+
+.mobile-nav-activ {
+    display: none;
+}
+
+.mobile-button-close .mobile-icon {
+    background: transparent;
+}
+
+.mobile-button-close .mobile-icon::before {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.mobile-button-close .mobile-icon::after {
+    top: 0px;
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,87 @@
+.content {
+    margin-top: 840px;
+    &-container {
+        max-width: $content-conainer;
+        margin: $center;
+    }
+}
+
+.article {
+    @include flex(space-between, center);
+    margin-bottom: 200px;
+    &-text {
+        margin: 0 114px 0 150px;
+        max-width: 630px;
+        position: relative;
+    }
+    .article-text::before {
+        content: attr(data-number);
+        position: absolute;
+        font-family: $gr;
+        font-weight: bold;
+        font-size: 240px;
+        line-height: 240px;
+        opacity: 0.1;
+        top: -103px;
+        left: -150px;
+    }
+    .description-article {
+        font-family: $gr;
+        font-weight: 800;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: $color-2;
+        margin-left: 96px;
+    }
+    .description-article::before {
+        @include line;
+        transform: translate(-96px, 10px);
+    }
+    h2 {
+        font-family: $chrd;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 77px;
+        margin: 25px 0;
+    }
+    .text {
+        font-family: $gr;
+        font-weight: bold;
+        line-height: 32px;
+    }
+    .readmore {
+        margin-top: 25px;
+        a {
+            position: relative;
+        }
+        span {
+            font-family: $gr;
+            color: $color-2;
+        }
+        img {
+            position: absolute;
+            right: -40px;
+            top: 2px;
+        }
+    }
+    .article-img {
+        max-width: 566px;
+        max-height: 720px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.reverse .article-img {
+    margin-right: 114px;
+}
+
+.reverse .article-text {
+    margin-right: 0px;
+}
