@@ -374,6 +374,7 @@ ul li {
 
 .article .article-img {
   max-width: 566px;
+  min-width: 250px;
   max-height: 720px;
 }
 
